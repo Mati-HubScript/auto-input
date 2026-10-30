@@ -1,0 +1,53 @@
+{
+	"geode": "4.0.0",
+	"gd": {
+		"win": "*",
+		"android": "*",
+		"mac": "*",
+		"ios": "*"
+	},
+	"version": "v1.0.0",
+	"id": "pulidoxgd.auto-input",
+	"name": "Auto Input",
+	"developer": "pulidoxgd",
+	"description": "Detects obstacles ahead of the player and automatically clicks, holds or spam-clicks to dodge them.",
+	"repository": "https://github.com/pulidoxgd/auto-input",
+	"settings": {
+		"enabled": {
+			"type": "bool",
+			"default": true,
+			"name": "Enable Auto Input",
+			"description": "Master switch. When off, the mod never touches your inputs."
+		},
+		"lookahead": {
+			"type": "float",
+			"default": 0.5,
+			"min": 0.25,
+			"max": 1.0,
+			"control": { "slider": true, "input": true },
+			"name": "Lookahead (seconds)",
+			"description": "How far ahead (in level time) the bot looks for obstacles. Higher = safer planning, more CPU."
+		},
+		"margin": {
+			"type": "float",
+			"default": 2.0,
+			"min": 0.0,
+			"max": 8.0,
+			"control": { "slider": true, "input": true },
+			"name": "Safety margin (units)",
+			"description": "Extra clearance added around every hazard when planning."
+		},
+		"orbs": {
+			"type": "bool",
+			"default": true,
+			"name": "Use orbs",
+			"description": "Automatically hit jump/gravity/dash orbs when a hazard lies shortly after them (experimental)."
+		},
+		"no-record": {
+			"type": "bool",
+			"default": true,
+			"name": "Don't save completions",
+			"description": "If Auto Input clicked during an attempt, the completion is NOT submitted/saved (treated like a test run). Keeps leaderboards and your stats legit."
+		}
+	}
+}
